@@ -1,0 +1,14 @@
+{
+  "pipeline": "EEGNet",
+  "mean_score": 0.7044753086419752,
+  "std_score": 0.1340683009007457,
+  "min_score": 0.53125,
+  "max_score": 0.8993055555555556,
+  "bottom_3_subjects": [
+    4,
+    7,
+    6
+  ],
+  "median_score": 0.6388888888888888,
+  "subjects_below_median": 4
+}
