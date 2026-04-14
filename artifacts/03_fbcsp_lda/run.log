@@ -1,65 +1,65 @@
-[2026-04-14 10:10:43] Logging to: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/run.log
-[2026-04-14 10:10:43] Dataset and paradigm initialized.
-[2026-04-14 10:10:43] Dataset: BNCI2014_001
-[2026-04-14 10:10:43] Paradigm: LeftRightImagery
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] DATASET INFORMATION
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] Number of subjects: 9
-[2026-04-14 10:10:43] Subject IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-[2026-04-14 10:10:43] Number of sessions: 2
-[2026-04-14 10:10:43] Event IDs (all classes): {'left_hand': 1, 'right_hand': 2, 'feet': 3, 'tongue': 4}
+[2026-04-14 14:51:14] Logging to: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/run.log
+[2026-04-14 14:51:14] Dataset and paradigm initialized.
+[2026-04-14 14:51:14] Dataset: BNCI2014_001
+[2026-04-14 14:51:14] Paradigm: LeftRightImagery
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] DATASET INFORMATION
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] Number of subjects: 9
+[2026-04-14 14:51:14] Subject IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+[2026-04-14 14:51:14] Number of sessions: 2
+[2026-04-14 14:51:14] Event IDs (all classes): {'left_hand': 1, 'right_hand': 2, 'feet': 3, 'tongue': 4}
 
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] PARADIGM INFORMATION
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] Frequency filters from paradigm: [[8, 32]]
-[2026-04-14 10:10:43] Paradigm events (left/right only): ['left_hand', 'right_hand']
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] FBCSP CONFIGURATION
-[2026-04-14 10:10:43] ============================================================
-[2026-04-14 10:10:43] Frequency bands: [(8, 12), (12, 16), (16, 20), (20, 24), (24, 28), (28, 32)]
-[2026-04-14 10:10:43] CSP components per band: 2
-[2026-04-14 10:10:43] Expected total feature dimension: 12
-[2026-04-14 10:10:43] FBCSP + LDA pipeline created:
-[2026-04-14 10:10:43] Pipeline(steps=[('filterbankcsptransformer',
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] PARADIGM INFORMATION
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] Frequency filters: [[8, 32]]
+[2026-04-14 14:51:14] Paradigm events (left/right only): ['left_hand', 'right_hand']
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] FBCSP CONFIGURATION
+[2026-04-14 14:51:14] ============================================================
+[2026-04-14 14:51:14] Frequency bands: [(8, 12), (12, 16), (16, 20), (20, 24), (24, 28), (28, 32)]
+[2026-04-14 14:51:14] CSP components per band: 2
+[2026-04-14 14:51:14] Expected total feature dimension: 12
+[2026-04-14 14:51:14] FBCSP + LDA pipeline created:
+[2026-04-14 14:51:14] Pipeline(steps=[('filterbankcsptransformer',
                  FilterBankCSPTransformer(bands=[(8, 12), (12, 16), (16, 20),
                                                  (20, 24), (24, 28),
                                                  (28, 32)])),
                 ('lineardiscriminantanalysis',
                  LinearDiscriminantAnalysis(shrinkage='auto', solver='lsqr'))])
-[2026-04-14 10:10:43] Cross-subject evaluation configured.
-[2026-04-14 10:10:43] Running cross-subject FBCSP evaluation...
+[2026-04-14 14:51:14] Cross-subject evaluation configured.
+[2026-04-14 14:51:14] Running cross-subject FBCSP evaluation...
 
-[2026-04-14 10:18:24] Evaluation complete!
-[2026-04-14 10:18:24] Results shape: (18, 9)
-[2026-04-14 10:18:24] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline']
-[2026-04-14 10:18:24] Evaluation elapsed time (sec): 461.02
-[2026-04-14 10:18:24] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/results.csv
+[2026-04-14 14:58:46] Evaluation complete!
+[2026-04-14 14:58:46] Results shape: (18, 9)
+[2026-04-14 14:58:46] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline']
+[2026-04-14 14:58:46] Evaluation elapsed time (sec): 451.85
+[2026-04-14 14:58:46] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/results.csv
 
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24] RESULT HEAD
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24]       score       time  samples subject session  channels  n_sessions       dataset   pipeline
-0  0.706404  48.121780   2304.0       1  0train        22           2  BNCI2014-001  FBCSP+LDA
-1  0.764275  48.121780   2304.0       1   1test        22           2  BNCI2014-001  FBCSP+LDA
-2  0.557292  45.374218   2304.0       2  0train        22           2  BNCI2014-001  FBCSP+LDA
-3  0.448495  45.374218   2304.0       2   1test        22           2  BNCI2014-001  FBCSP+LDA
-4  0.658179  45.932472   2304.0       3  0train        22           2  BNCI2014-001  FBCSP+LDA
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46] RESULT HEAD
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46]       score       time  samples subject session  channels  n_sessions       dataset   pipeline
+0  0.706404  47.686779   2304.0       1  0train        22           2  BNCI2014-001  FBCSP+LDA
+1  0.764275  47.686779   2304.0       1   1test        22           2  BNCI2014-001  FBCSP+LDA
+2  0.557292  46.707146   2304.0       2  0train        22           2  BNCI2014-001  FBCSP+LDA
+3  0.448495  46.707146   2304.0       2   1test        22           2  BNCI2014-001  FBCSP+LDA
+4  0.658179  48.661598   2304.0       3  0train        22           2  BNCI2014-001  FBCSP+LDA
 
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24] RESULTS SUMMARY
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24] Mean score: 0.6308
-[2026-04-14 10:18:24] Std score: 0.0846
-[2026-04-14 10:18:24] Min score: 0.4485
-[2026-04-14 10:18:24] Max score: 0.7643
-[2026-04-14 10:18:24] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/summary_metrics.csv
-[2026-04-14 10:18:24] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/summary_metrics.json
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24] PER-SUBJECT PERFORMANCE (sorted from worst to best)
-[2026-04-14 10:18:24] ============================================================
-[2026-04-14 10:18:24] subject
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46] RESULTS SUMMARY
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46] Mean score: 0.6308
+[2026-04-14 14:58:46] Std score: 0.0846
+[2026-04-14 14:58:46] Min score: 0.4485
+[2026-04-14 14:58:46] Max score: 0.7643
+[2026-04-14 14:58:46] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/summary_metrics.csv
+[2026-04-14 14:58:46] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/summary_metrics.json
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46] PER-SUBJECT PERFORMANCE (sorted from worst to best)
+[2026-04-14 14:58:46] ============================================================
+[2026-04-14 14:58:46] subject
 2    0.502894
 5    0.538291
 6    0.563850
@@ -71,15 +71,15 @@
 1    0.735340
 Name: score, dtype: float32
 
-[2026-04-14 10:18:24] Best performing subject: 1 (0.7353)
-[2026-04-14 10:18:24] Worst performing subject: 2 (0.5029)
+[2026-04-14 14:58:46] Best performing subject: 1 (0.7353)
+[2026-04-14 14:58:46] Worst performing subject: 2 (0.5029)
 
-[2026-04-14 10:18:24] Bottom 3 subjects:
-[2026-04-14 10:18:24]   Subject 2: 0.5029
-[2026-04-14 10:18:24]   Subject 5: 0.5383
-[2026-04-14 10:18:24]   Subject 6: 0.5639
-[2026-04-14 10:18:24] Median score: 0.6481
-[2026-04-14 10:18:24] Subjects below median: 4/9
-[2026-04-14 10:18:24] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/per_subject_scores.csv
-[2026-04-14 10:18:24] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/per_subject_accuracy_bar.png
-[2026-04-14 10:18:25] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/performance_distribution_boxplot.png
+[2026-04-14 14:58:46] Bottom 3 subjects:
+[2026-04-14 14:58:46]   Subject 2: 0.5029
+[2026-04-14 14:58:46]   Subject 5: 0.5383
+[2026-04-14 14:58:46]   Subject 6: 0.5639
+[2026-04-14 14:58:46] Median score: 0.6481
+[2026-04-14 14:58:46] Subjects below median: 4/9
+[2026-04-14 14:58:46] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/per_subject_scores.csv
+[2026-04-14 14:58:46] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/per_subject_accuracy_bar.png
+[2026-04-14 14:58:46] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/artifacts/03_fbcsp_lda/performance_distribution_boxplot.png
