@@ -1,0 +1,92 @@
+[2026-04-13 19:44:04] Logging to: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/run.log
+[2026-04-13 19:44:04] Dataset and paradigm initialized.
+[2026-04-13 19:44:04] Dataset: BNCI2014_001
+[2026-04-13 19:44:04] Paradigm: LeftRightImagery
+[2026-04-13 19:44:04] ============================================================
+[2026-04-13 19:44:04] DATASET INFORMATION
+[2026-04-13 19:44:04] ============================================================
+[2026-04-13 19:44:04] Number of subjects: 9
+[2026-04-13 19:44:04] Subject IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+[2026-04-13 19:44:04] Number of sessions: 2
+[2026-04-13 19:44:04] Event IDs (all classes): {'left_hand': 1, 'right_hand': 2, 'feet': 3, 'tongue': 4}
+
+[2026-04-13 19:44:04] ============================================================
+[2026-04-13 19:44:04] PARADIGM INFORMATION
+[2026-04-13 19:44:04] ============================================================
+[2026-04-13 19:44:04] Frequency filters: [[8, 32]]
+[2026-04-13 19:44:04] Paradigm events (left/right only): ['left_hand', 'right_hand']
+[2026-04-13 19:44:04] Improved pipeline created:
+[2026-04-13 19:44:04] Pipeline(steps=[('euclideanalignment', EuclideanAlignment()),
+                ('csp', CSP(log=True, n_components=8)),
+                ('lineardiscriminantanalysis',
+                 LinearDiscriminantAnalysis(shrinkage='auto', solver='lsqr'))])
+[2026-04-13 19:44:04] Cross-subject evaluation configured.
+[2026-04-13 19:44:04] Running cross-subject evaluation...
+
+[2026-04-13 19:44:31] Evaluation complete!
+[2026-04-13 19:44:31] Results shape: (18, 9)
+[2026-04-13 19:44:31] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline']
+[2026-04-13 19:44:31] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/results.csv
+
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] Results:
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32]        score      time  samples subject session  channels  n_sessions       dataset    pipeline
+0   0.910494  2.117745   2304.0       1  0train        22           2  BNCI2014-001  EA+CSP+LDA
+1   0.936535  2.117745   2304.0       1   1test        22           2  BNCI2014-001  EA+CSP+LDA
+2   0.570602  1.658851   2304.0       2  0train        22           2  BNCI2014-001  EA+CSP+LDA
+3   0.557870  1.658851   2304.0       2   1test        22           2  BNCI2014-001  EA+CSP+LDA
+4   0.983410  1.599609   2304.0       3  0train        22           2  BNCI2014-001  EA+CSP+LDA
+5   0.976852  1.599609   2304.0       3   1test        22           2  BNCI2014-001  EA+CSP+LDA
+6   0.750000  1.592350   2304.0       4  0train        22           2  BNCI2014-001  EA+CSP+LDA
+7   0.809221  1.592350   2304.0       4   1test        22           2  BNCI2014-001  EA+CSP+LDA
+8   0.508873  1.563940   2304.0       5  0train        22           2  BNCI2014-001  EA+CSP+LDA
+9   0.620563  1.563940   2304.0       5   1test        22           2  BNCI2014-001  EA+CSP+LDA
+10  0.686921  1.567274   2304.0       6  0train        22           2  BNCI2014-001  EA+CSP+LDA
+11  0.645448  1.567274   2304.0       6   1test        22           2  BNCI2014-001  EA+CSP+LDA
+12  0.664159  1.579030   2304.0       7  0train        22           2  BNCI2014-001  EA+CSP+LDA
+13  0.689236  1.579030   2304.0       7   1test        22           2  BNCI2014-001  EA+CSP+LDA
+14  0.990741  1.591568   2304.0       8  0train        22           2  BNCI2014-001  EA+CSP+LDA
+15  0.978974  1.591568   2304.0       8   1test        22           2  BNCI2014-001  EA+CSP+LDA
+16  0.826196  1.553966   2304.0       9  0train        22           2  BNCI2014-001  EA+CSP+LDA
+17  0.788387  1.553966   2304.0       9   1test        22           2  BNCI2014-001  EA+CSP+LDA
+
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] RESULTS SUMMARY
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] Mean score: 0.7719
+[2026-04-13 19:44:32] Std score: 0.1625
+[2026-04-13 19:44:32] Min score: 0.5089
+[2026-04-13 19:44:32] Max score: 0.9907
+[2026-04-13 19:44:32] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/summary_metrics.csv
+[2026-04-13 19:44:32] Saved json: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/summary_metrics.json
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] PER-SUBJECT PERFORMANCE (sorted from worst to best)
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] subject
+2    0.564236
+5    0.564718
+6    0.666184
+7    0.676697
+4    0.779610
+9    0.807292
+1    0.923515
+3    0.980131
+8    0.984857
+Name: score, dtype: float32
+
+[2026-04-13 19:44:32] Best performing subject: 8 (0.9849)
+[2026-04-13 19:44:32] Worst performing subject: 2 (0.5642)
+[2026-04-13 19:44:32] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/per_subject_scores.csv
+[2026-04-13 19:44:32] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/per_subject_accuracy_bar.png
+[2026-04-13 19:44:32] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/artifacts/03_ea_csp_lda/performance_distribution_boxplot.png
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] LOW-PERFORMING SUBJECTS (candidates for comparison)
+[2026-04-13 19:44:32] ============================================================
+[2026-04-13 19:44:32] Bottom 3 subjects:
+[2026-04-13 19:44:32]   Subject 2: 0.5642
+[2026-04-13 19:44:32]   Subject 5: 0.5647
+[2026-04-13 19:44:32]   Subject 6: 0.6662
+[2026-04-13 19:44:32] Median score: 0.7796
+[2026-04-13 19:44:32] Subjects below median: 4/9
+[2026-04-13 19:44:32] These subjects will be carried forward into the comparison notebook.
