@@ -93,7 +93,7 @@ Band: 8–35 Hz
 CSP components: 10
 Mean score: 0.7757
 
-This result improved slightly over the original baseline mean of 0.7719. The same tuned configuration was also best on average for the weak-subject group (2, 5), with a bottom-2 mean of AAAA.
+This result improved slightly over the original baseline mean of 0.7719. The same tuned configuration was also best on average for the weak-subject group (2, 5), with a bottom-2 mean of 0.5685.
 
 However, the tuning sweep also revealed an important limitation: the weak subjects did not all prefer the same settings. Subject 2 and Subject 5 each had different best local configurations. That means the problem is not fully solved by one global hyperparameter choice. Instead, subject variability remains the main unresolved issue.
 

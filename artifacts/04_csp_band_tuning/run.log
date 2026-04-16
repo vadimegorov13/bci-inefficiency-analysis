@@ -1,334 +1,451 @@
-[2026-04-14 10:55:30] Logging to: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/run.log
-[2026-04-14 10:55:30] Dataset and baseline paradigm initialized.
-[2026-04-14 10:55:30] Dataset: BNCI2014_001
-[2026-04-14 10:55:30] Paradigm: LeftRightImagery
+[2026-04-15 16:20:33] Logging to: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/run.log
+[2026-04-15 16:20:33] Dataset and baseline paradigm initialized.
+[2026-04-15 16:20:33] Dataset: BNCI2014_001
+[2026-04-15 16:20:33] Paradigm: LeftRightImagery
 
-[2026-04-14 10:55:30] ============================================================
-[2026-04-14 10:55:30] DATASET INFORMATION
-[2026-04-14 10:55:30] ============================================================
-[2026-04-14 10:55:30] Number of subjects: 9
-[2026-04-14 10:55:30] Subject IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-[2026-04-14 10:55:30] Number of sessions: 2
-[2026-04-14 10:55:30] Event IDs (all classes): {'left_hand': 1, 'right_hand': 2, 'feet': 3, 'tongue': 4}
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:20:33] DATASET INFORMATION
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:20:33] Number of subjects: 9
+[2026-04-15 16:20:33] Subject IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+[2026-04-15 16:20:33] Number of sessions: 2
+[2026-04-15 16:20:33] Event IDs (all classes): {'left_hand': 1, 'right_hand': 2, 'feet': 3, 'tongue': 4}
 
-[2026-04-14 10:55:30] ============================================================
-[2026-04-14 10:55:30] TUNING GRID
-[2026-04-14 10:55:30] ============================================================
-[2026-04-14 10:55:30] Bands: [(8, 30), (8, 32), (8, 35), (10, 30), (12, 30)]
-[2026-04-14 10:55:30] CSP components: [4, 6, 8, 10]
-[2026-04-14 10:55:30] Low-performing subjects of interest: [2, 5, 6]
-[2026-04-14 10:55:30] Total configurations: 20
-[2026-04-14 10:55:30] Base paradigm events: ['left_hand', 'right_hand']
-[2026-04-14 10:55:30] Base paradigm filters: [[8, 32]]
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:20:33] TUNING GRID
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:20:33] Bands: [(8, 30), (8, 32), (8, 35), (10, 30), (12, 30)]
+[2026-04-15 16:20:33] CSP components: [4, 6, 8, 10, 12, 14]
+[2026-04-15 16:20:33] Low-performing subjects of interest: [2, 5]
+[2026-04-15 16:20:33] Total configurations: 30
+[2026-04-15 16:20:33] Base paradigm events: ['left_hand', 'right_hand']
+[2026-04-15 16:20:33] Base paradigm filters: [[8, 32]]
 
-[2026-04-14 10:55:30] ============================================================
-[2026-04-14 10:55:30] RUNNING CONFIG 1/20: band_8_30__csp_4
-[2026-04-14 10:55:30] ============================================================
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:20:33] RUNNING CONFIG 1/30: band_8_30__csp_4
+[2026-04-15 16:20:33] ============================================================
+[2026-04-15 16:24:49] Results shape: (18, 15)
+[2026-04-15 16:24:49] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:24:49] Elapsed (sec): 256.23
+[2026-04-15 16:24:49] Mean score: 0.7206
+[2026-04-15 16:24:49] Std score: 0.1399
+[2026-04-15 16:24:49] Min score: 0.4884
+[2026-04-15 16:24:49] Max score: 0.9877
+[2026-04-15 16:24:49] Bottom-2 mean score (subjects [2, 5]): 0.5568
 
-[2026-04-14 10:57:42] ============================================================
-[2026-04-14 10:57:42] RUNNING CONFIG 1/20: band_8_30__csp_4
-[2026-04-14 10:57:42] ============================================================
-[2026-04-14 10:58:18] Results shape: (18, 15)
-[2026-04-14 10:58:18] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 10:58:18] Elapsed (sec): 36.48
-[2026-04-14 10:58:18] Mean score: 0.7018
-[2026-04-14 10:58:18] Std score: 0.1473
-[2026-04-14 10:58:18] Min score: 0.4628
-[2026-04-14 10:58:18] Max score: 0.9907
-[2026-04-14 10:58:18] Bottom-3 mean score (subjects [2, 5, 6]): 0.5627
+[2026-04-15 16:24:49] ============================================================
+[2026-04-15 16:24:49] RUNNING CONFIG 2/30: band_8_30__csp_6
+[2026-04-15 16:24:49] ============================================================
+[2026-04-15 16:26:27] Results shape: (18, 15)
+[2026-04-15 16:26:27] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:26:27] Elapsed (sec): 97.26
+[2026-04-15 16:26:27] Mean score: 0.7686
+[2026-04-15 16:26:27] Std score: 0.1636
+[2026-04-15 16:26:27] Min score: 0.4861
+[2026-04-15 16:26:27] Max score: 0.9878
+[2026-04-15 16:26:27] Bottom-2 mean score (subjects [2, 5]): 0.5599
 
-[2026-04-14 10:58:18] ============================================================
-[2026-04-14 10:58:18] RUNNING CONFIG 2/20: band_8_30__csp_6
-[2026-04-14 10:58:18] ============================================================
-[2026-04-14 10:58:52] Results shape: (18, 15)
-[2026-04-14 10:58:52] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 10:58:52] Elapsed (sec): 33.32
-[2026-04-14 10:58:52] Mean score: 0.7641
-[2026-04-14 10:58:52] Std score: 0.1656
-[2026-04-14 10:58:52] Min score: 0.4819
-[2026-04-14 10:58:52] Max score: 0.9900
-[2026-04-14 10:58:52] Bottom-3 mean score (subjects [2, 5, 6]): 0.5916
+[2026-04-15 16:26:27] ============================================================
+[2026-04-15 16:26:27] RUNNING CONFIG 3/30: band_8_30__csp_8
+[2026-04-15 16:26:27] ============================================================
+[2026-04-15 16:28:05] Results shape: (18, 15)
+[2026-04-15 16:28:05] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:28:05] Elapsed (sec): 97.87
+[2026-04-15 16:28:05] Mean score: 0.7748
+[2026-04-15 16:28:05] Std score: 0.1645
+[2026-04-15 16:28:05] Min score: 0.4938
+[2026-04-15 16:28:05] Max score: 0.9902
+[2026-04-15 16:28:05] Bottom-2 mean score (subjects [2, 5]): 0.5586
 
-[2026-04-14 10:58:52] ============================================================
-[2026-04-14 10:58:52] RUNNING CONFIG 3/20: band_8_30__csp_8
-[2026-04-14 10:58:52] ============================================================
-[2026-04-14 10:59:32] Results shape: (18, 15)
-[2026-04-14 10:59:32] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 10:59:32] Elapsed (sec): 40.37
-[2026-04-14 10:59:32] Mean score: 0.7703
-[2026-04-14 10:59:32] Std score: 0.1651
-[2026-04-14 10:59:32] Min score: 0.4880
-[2026-04-14 10:59:32] Max score: 0.9907
-[2026-04-14 10:59:32] Bottom-3 mean score (subjects [2, 5, 6]): 0.5925
+[2026-04-15 16:28:05] ============================================================
+[2026-04-15 16:28:05] RUNNING CONFIG 4/30: band_8_30__csp_10
+[2026-04-15 16:28:05] ============================================================
+[2026-04-15 16:29:43] Results shape: (18, 15)
+[2026-04-15 16:29:43] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:29:43] Elapsed (sec): 97.95
+[2026-04-15 16:29:43] Mean score: 0.7746
+[2026-04-15 16:29:43] Std score: 0.1654
+[2026-04-15 16:29:43] Min score: 0.4963
+[2026-04-15 16:29:43] Max score: 0.9915
+[2026-04-15 16:29:43] Bottom-2 mean score (subjects [2, 5]): 0.5523
 
-[2026-04-14 10:59:32] ============================================================
-[2026-04-14 10:59:32] RUNNING CONFIG 4/20: band_8_30__csp_10
-[2026-04-14 10:59:32] ============================================================
-[2026-04-14 11:00:09] Results shape: (18, 15)
-[2026-04-14 11:00:09] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:00:09] Elapsed (sec): 37.25
-[2026-04-14 11:00:09] Mean score: 0.7716
-[2026-04-14 11:00:09] Std score: 0.1659
-[2026-04-14 11:00:09] Min score: 0.4905
-[2026-04-14 11:00:09] Max score: 0.9931
-[2026-04-14 11:00:09] Bottom-3 mean score (subjects [2, 5, 6]): 0.5960
+[2026-04-15 16:29:43] ============================================================
+[2026-04-15 16:29:43] RUNNING CONFIG 5/30: band_8_30__csp_12
+[2026-04-15 16:29:43] ============================================================
+[2026-04-15 16:31:21] Results shape: (18, 15)
+[2026-04-15 16:31:21] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:31:21] Elapsed (sec): 98.33
+[2026-04-15 16:31:21] Mean score: 0.7756
+[2026-04-15 16:31:21] Std score: 0.1680
+[2026-04-15 16:31:21] Min score: 0.4747
+[2026-04-15 16:31:21] Max score: 0.9931
+[2026-04-15 16:31:21] Bottom-2 mean score (subjects [2, 5]): 0.5478
 
-[2026-04-14 11:00:09] ============================================================
-[2026-04-14 11:00:09] RUNNING CONFIG 5/20: band_8_32__csp_4
-[2026-04-14 11:00:09] ============================================================
-[2026-04-14 11:00:44] Results shape: (18, 15)
-[2026-04-14 11:00:44] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:00:44] Elapsed (sec): 34.75
-[2026-04-14 11:00:44] Mean score: 0.7025
-[2026-04-14 11:00:44] Std score: 0.1458
-[2026-04-14 11:00:44] Min score: 0.4689
-[2026-04-14 11:00:44] Max score: 0.9907
-[2026-04-14 11:00:44] Bottom-3 mean score (subjects [2, 5, 6]): 0.5657
+[2026-04-15 16:31:21] ============================================================
+[2026-04-15 16:31:21] RUNNING CONFIG 6/30: band_8_30__csp_14
+[2026-04-15 16:31:21] ============================================================
+[2026-04-15 16:33:00] Results shape: (18, 15)
+[2026-04-15 16:33:00] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:33:00] Elapsed (sec): 98.82
+[2026-04-15 16:33:00] Mean score: 0.7715
+[2026-04-15 16:33:00] Std score: 0.1758
+[2026-04-15 16:33:00] Min score: 0.4726
+[2026-04-15 16:33:00] Max score: 0.9944
+[2026-04-15 16:33:00] Bottom-2 mean score (subjects [2, 5]): 0.5474
 
-[2026-04-14 11:00:44] ============================================================
-[2026-04-14 11:00:44] RUNNING CONFIG 6/20: band_8_32__csp_6
-[2026-04-14 11:00:44] ============================================================
-[2026-04-14 11:01:18] Results shape: (18, 15)
-[2026-04-14 11:01:18] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:01:18] Elapsed (sec): 33.56
-[2026-04-14 11:01:18] Mean score: 0.7655
-[2026-04-14 11:01:18] Std score: 0.1634
-[2026-04-14 11:01:18] Min score: 0.5014
-[2026-04-14 11:01:18] Max score: 0.9898
-[2026-04-14 11:01:18] Bottom-3 mean score (subjects [2, 5, 6]): 0.5969
+[2026-04-15 16:33:00] ============================================================
+[2026-04-15 16:33:00] RUNNING CONFIG 7/30: band_8_32__csp_4
+[2026-04-15 16:33:00] ============================================================
+[2026-04-15 16:34:37] Results shape: (18, 15)
+[2026-04-15 16:34:37] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:34:37] Elapsed (sec): 97.13
+[2026-04-15 16:34:37] Mean score: 0.7214
+[2026-04-15 16:34:37] Std score: 0.1383
+[2026-04-15 16:34:37] Min score: 0.5004
+[2026-04-15 16:34:37] Max score: 0.9875
+[2026-04-15 16:34:37] Bottom-2 mean score (subjects [2, 5]): 0.5611
 
-[2026-04-14 11:01:18] ============================================================
-[2026-04-14 11:01:18] RUNNING CONFIG 7/20: band_8_32__csp_8
-[2026-04-14 11:01:18] ============================================================
-[2026-04-14 11:01:18] Results shape: (18, 15)
-[2026-04-14 11:01:18] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:01:18] Elapsed (sec): 0.58
-[2026-04-14 11:01:18] Mean score: 0.7719
-[2026-04-14 11:01:18] Std score: 0.1625
-[2026-04-14 11:01:18] Min score: 0.5089
-[2026-04-14 11:01:18] Max score: 0.9907
-[2026-04-14 11:01:18] Bottom-3 mean score (subjects [2, 5, 6]): 0.5984
+[2026-04-15 16:34:37] ============================================================
+[2026-04-15 16:34:37] RUNNING CONFIG 8/30: band_8_32__csp_6
+[2026-04-15 16:34:37] ============================================================
+[2026-04-15 16:36:15] Results shape: (18, 15)
+[2026-04-15 16:36:15] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:36:15] Elapsed (sec): 98.08
+[2026-04-15 16:36:15] Mean score: 0.7695
+[2026-04-15 16:36:15] Std score: 0.1623
+[2026-04-15 16:36:15] Min score: 0.4971
+[2026-04-15 16:36:15] Max score: 0.9880
+[2026-04-15 16:36:15] Bottom-2 mean score (subjects [2, 5]): 0.5643
 
-[2026-04-14 11:01:18] ============================================================
-[2026-04-14 11:01:18] RUNNING CONFIG 8/20: band_8_32__csp_10
-[2026-04-14 11:01:18] ============================================================
-[2026-04-14 11:01:53] Results shape: (18, 15)
-[2026-04-14 11:01:53] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:01:53] Elapsed (sec): 35.07
-[2026-04-14 11:01:53] Mean score: 0.7732
-[2026-04-14 11:01:53] Std score: 0.1636
-[2026-04-14 11:01:53] Min score: 0.5116
-[2026-04-14 11:01:53] Max score: 0.9932
-[2026-04-14 11:01:53] Bottom-3 mean score (subjects [2, 5, 6]): 0.6020
+[2026-04-15 16:36:15] ============================================================
+[2026-04-15 16:36:15] RUNNING CONFIG 9/30: band_8_32__csp_8
+[2026-04-15 16:36:15] ============================================================
+[2026-04-15 16:37:53] Results shape: (18, 15)
+[2026-04-15 16:37:53] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:37:53] Elapsed (sec): 98.31
+[2026-04-15 16:37:53] Mean score: 0.7754
+[2026-04-15 16:37:53] Std score: 0.1632
+[2026-04-15 16:37:53] Min score: 0.5039
+[2026-04-15 16:37:53] Max score: 0.9902
+[2026-04-15 16:37:53] Bottom-2 mean score (subjects [2, 5]): 0.5632
 
-[2026-04-14 11:01:53] ============================================================
-[2026-04-14 11:01:53] RUNNING CONFIG 9/20: band_8_35__csp_4
-[2026-04-14 11:01:53] ============================================================
-[2026-04-14 11:02:27] Results shape: (18, 15)
-[2026-04-14 11:02:27] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:02:27] Elapsed (sec): 34.05
-[2026-04-14 11:02:27] Mean score: 0.7028
-[2026-04-14 11:02:27] Std score: 0.1445
-[2026-04-14 11:02:27] Min score: 0.4774
-[2026-04-14 11:02:27] Max score: 0.9902
-[2026-04-14 11:02:27] Bottom-3 mean score (subjects [2, 5, 6]): 0.5684
+[2026-04-15 16:37:53] ============================================================
+[2026-04-15 16:37:53] RUNNING CONFIG 10/30: band_8_32__csp_10
+[2026-04-15 16:37:53] ============================================================
+[2026-04-15 16:39:32] Results shape: (18, 15)
+[2026-04-15 16:39:32] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:39:32] Elapsed (sec): 98.51
+[2026-04-15 16:39:32] Mean score: 0.7762
+[2026-04-15 16:39:32] Std score: 0.1635
+[2026-04-15 16:39:32] Min score: 0.5089
+[2026-04-15 16:39:32] Max score: 0.9909
+[2026-04-15 16:39:32] Bottom-2 mean score (subjects [2, 5]): 0.5589
 
-[2026-04-14 11:02:27] ============================================================
-[2026-04-14 11:02:27] RUNNING CONFIG 10/20: band_8_35__csp_6
-[2026-04-14 11:02:27] ============================================================
-[2026-04-14 11:03:01] Results shape: (18, 15)
-[2026-04-14 11:03:01] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:03:01] Elapsed (sec): 33.20
-[2026-04-14 11:03:01] Mean score: 0.7664
-[2026-04-14 11:03:01] Std score: 0.1606
-[2026-04-14 11:03:01] Min score: 0.5272
-[2026-04-14 11:03:01] Max score: 0.9898
-[2026-04-14 11:03:01] Bottom-3 mean score (subjects [2, 5, 6]): 0.6038
+[2026-04-15 16:39:32] ============================================================
+[2026-04-15 16:39:32] RUNNING CONFIG 11/30: band_8_32__csp_12
+[2026-04-15 16:39:32] ============================================================
+[2026-04-15 16:41:11] Results shape: (18, 15)
+[2026-04-15 16:41:11] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:41:11] Elapsed (sec): 99.12
+[2026-04-15 16:41:11] Mean score: 0.7734
+[2026-04-15 16:41:11] Std score: 0.1695
+[2026-04-15 16:41:11] Min score: 0.4863
+[2026-04-15 16:41:11] Max score: 0.9929
+[2026-04-15 16:41:11] Bottom-2 mean score (subjects [2, 5]): 0.5506
 
-[2026-04-14 11:03:01] ============================================================
-[2026-04-14 11:03:01] RUNNING CONFIG 11/20: band_8_35__csp_8
-[2026-04-14 11:03:01] ============================================================
-[2026-04-14 11:03:34] Results shape: (18, 15)
-[2026-04-14 11:03:34] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:03:34] Elapsed (sec): 33.18
-[2026-04-14 11:03:34] Mean score: 0.7732
-[2026-04-14 11:03:34] Std score: 0.1603
-[2026-04-14 11:03:34] Min score: 0.5320
-[2026-04-14 11:03:34] Max score: 0.9913
-[2026-04-14 11:03:34] Bottom-3 mean score (subjects [2, 5, 6]): 0.6043
+[2026-04-15 16:41:11] ============================================================
+[2026-04-15 16:41:11] RUNNING CONFIG 12/30: band_8_32__csp_14
+[2026-04-15 16:41:11] ============================================================
+[2026-04-15 16:42:50] Results shape: (18, 15)
+[2026-04-15 16:42:50] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:42:50] Elapsed (sec): 98.67
+[2026-04-15 16:42:50] Mean score: 0.7719
+[2026-04-15 16:42:50] Std score: 0.1760
+[2026-04-15 16:42:50] Min score: 0.4850
+[2026-04-15 16:42:50] Max score: 0.9940
+[2026-04-15 16:42:50] Bottom-2 mean score (subjects [2, 5]): 0.5482
 
-[2026-04-14 11:03:34] ============================================================
-[2026-04-14 11:03:34] RUNNING CONFIG 12/20: band_8_35__csp_10
-[2026-04-14 11:03:34] ============================================================
-[2026-04-14 11:04:07] Results shape: (18, 15)
-[2026-04-14 11:04:07] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:04:07] Elapsed (sec): 33.37
-[2026-04-14 11:04:07] Mean score: 0.7757
-[2026-04-14 11:04:07] Std score: 0.1604
-[2026-04-14 11:04:07] Min score: 0.5343
-[2026-04-14 11:04:07] Max score: 0.9936
-[2026-04-14 11:04:07] Bottom-3 mean score (subjects [2, 5, 6]): 0.6107
+[2026-04-15 16:42:50] ============================================================
+[2026-04-15 16:42:50] RUNNING CONFIG 13/30: band_8_35__csp_4
+[2026-04-15 16:42:50] ============================================================
+[2026-04-15 16:44:28] Results shape: (18, 15)
+[2026-04-15 16:44:28] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:44:28] Elapsed (sec): 98.08
+[2026-04-15 16:44:28] Mean score: 0.7219
+[2026-04-15 16:44:28] Std score: 0.1367
+[2026-04-15 16:44:28] Min score: 0.5114
+[2026-04-15 16:44:28] Max score: 0.9875
+[2026-04-15 16:44:28] Bottom-2 mean score (subjects [2, 5]): 0.5651
 
-[2026-04-14 11:04:07] ============================================================
-[2026-04-14 11:04:07] RUNNING CONFIG 13/20: band_10_30__csp_4
-[2026-04-14 11:04:07] ============================================================
-[2026-04-14 11:04:40] Results shape: (18, 15)
-[2026-04-14 11:04:40] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:04:40] Elapsed (sec): 33.31
-[2026-04-14 11:04:40] Mean score: 0.7263
-[2026-04-14 11:04:40] Std score: 0.1495
-[2026-04-14 11:04:40] Min score: 0.5104
-[2026-04-14 11:04:40] Max score: 0.9676
-[2026-04-14 11:04:40] Bottom-3 mean score (subjects [2, 5, 6]): 0.5941
+[2026-04-15 16:44:28] ============================================================
+[2026-04-15 16:44:28] RUNNING CONFIG 14/30: band_8_35__csp_6
+[2026-04-15 16:44:28] ============================================================
+[2026-04-15 16:46:05] Results shape: (18, 15)
+[2026-04-15 16:46:05] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:46:05] Elapsed (sec): 97.75
+[2026-04-15 16:46:05] Mean score: 0.7702
+[2026-04-15 16:46:05] Std score: 0.1612
+[2026-04-15 16:46:05] Min score: 0.5062
+[2026-04-15 16:46:05] Max score: 0.9880
+[2026-04-15 16:46:05] Bottom-2 mean score (subjects [2, 5]): 0.5684
 
-[2026-04-14 11:04:40] ============================================================
-[2026-04-14 11:04:40] RUNNING CONFIG 14/20: band_10_30__csp_6
-[2026-04-14 11:04:40] ============================================================
-[2026-04-14 11:05:17] Results shape: (18, 15)
-[2026-04-14 11:05:17] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:05:17] Elapsed (sec): 36.67
-[2026-04-14 11:05:17] Mean score: 0.7555
-[2026-04-14 11:05:17] Std score: 0.1581
-[2026-04-14 11:05:17] Min score: 0.5152
-[2026-04-14 11:05:17] Max score: 0.9672
-[2026-04-14 11:05:17] Bottom-3 mean score (subjects [2, 5, 6]): 0.5954
+[2026-04-15 16:46:05] ============================================================
+[2026-04-15 16:46:05] RUNNING CONFIG 15/30: band_8_35__csp_8
+[2026-04-15 16:46:05] ============================================================
+[2026-04-15 16:47:44] Results shape: (18, 15)
+[2026-04-15 16:47:44] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:47:44] Elapsed (sec): 98.34
+[2026-04-15 16:47:44] Mean score: 0.7763
+[2026-04-15 16:47:44] Std score: 0.1616
+[2026-04-15 16:47:44] Min score: 0.5177
+[2026-04-15 16:47:44] Max score: 0.9902
+[2026-04-15 16:47:44] Bottom-2 mean score (subjects [2, 5]): 0.5686
 
-[2026-04-14 11:05:17] ============================================================
-[2026-04-14 11:05:17] RUNNING CONFIG 15/20: band_10_30__csp_8
-[2026-04-14 11:05:17] ============================================================
-[2026-04-14 11:05:49] Results shape: (18, 15)
-[2026-04-14 11:05:49] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:05:49] Elapsed (sec): 31.60
-[2026-04-14 11:05:49] Mean score: 0.7583
-[2026-04-14 11:05:49] Std score: 0.1658
-[2026-04-14 11:05:49] Min score: 0.5042
-[2026-04-14 11:05:49] Max score: 0.9774
-[2026-04-14 11:05:49] Bottom-3 mean score (subjects [2, 5, 6]): 0.5837
+[2026-04-15 16:47:44] ============================================================
+[2026-04-15 16:47:44] RUNNING CONFIG 16/30: band_8_35__csp_10
+[2026-04-15 16:47:44] ============================================================
+[2026-04-15 16:49:22] Results shape: (18, 15)
+[2026-04-15 16:49:22] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:49:22] Elapsed (sec): 98.00
+[2026-04-15 16:49:22] Mean score: 0.7774
+[2026-04-15 16:49:22] Std score: 0.1621
+[2026-04-15 16:49:22] Min score: 0.5201
+[2026-04-15 16:49:22] Max score: 0.9913
+[2026-04-15 16:49:22] Bottom-2 mean score (subjects [2, 5]): 0.5638
 
-[2026-04-14 11:05:49] ============================================================
-[2026-04-14 11:05:49] RUNNING CONFIG 16/20: band_10_30__csp_10
-[2026-04-14 11:05:49] ============================================================
-[2026-04-14 11:06:20] Results shape: (18, 15)
-[2026-04-14 11:06:20] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:06:20] Elapsed (sec): 31.54
-[2026-04-14 11:06:20] Mean score: 0.7621
-[2026-04-14 11:06:20] Std score: 0.1628
-[2026-04-14 11:06:20] Min score: 0.4958
-[2026-04-14 11:06:20] Max score: 0.9776
-[2026-04-14 11:06:20] Bottom-3 mean score (subjects [2, 5, 6]): 0.5871
+[2026-04-15 16:49:22] ============================================================
+[2026-04-15 16:49:22] RUNNING CONFIG 17/30: band_8_35__csp_12
+[2026-04-15 16:49:22] ============================================================
+[2026-04-15 16:51:00] Results shape: (18, 15)
+[2026-04-15 16:51:00] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:51:00] Elapsed (sec): 98.52
+[2026-04-15 16:51:00] Mean score: 0.7766
+[2026-04-15 16:51:00] Std score: 0.1661
+[2026-04-15 16:51:00] Min score: 0.5081
+[2026-04-15 16:51:00] Max score: 0.9927
+[2026-04-15 16:51:00] Bottom-2 mean score (subjects [2, 5]): 0.5587
 
-[2026-04-14 11:06:20] ============================================================
-[2026-04-14 11:06:20] RUNNING CONFIG 17/20: band_12_30__csp_4
-[2026-04-14 11:06:20] ============================================================
-[2026-04-14 11:06:51] Results shape: (18, 15)
-[2026-04-14 11:06:51] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:06:51] Elapsed (sec): 31.13
-[2026-04-14 11:06:51] Mean score: 0.6829
-[2026-04-14 11:06:51] Std score: 0.1384
-[2026-04-14 11:06:51] Min score: 0.4512
-[2026-04-14 11:06:51] Max score: 0.9560
-[2026-04-14 11:06:51] Bottom-3 mean score (subjects [2, 5, 6]): 0.5539
+[2026-04-15 16:51:00] ============================================================
+[2026-04-15 16:51:00] RUNNING CONFIG 18/30: band_8_35__csp_14
+[2026-04-15 16:51:00] ============================================================
+[2026-04-15 16:52:38] Results shape: (18, 15)
+[2026-04-15 16:52:38] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:52:38] Elapsed (sec): 97.77
+[2026-04-15 16:52:38] Mean score: 0.7744
+[2026-04-15 16:52:38] Std score: 0.1740
+[2026-04-15 16:52:38] Min score: 0.4961
+[2026-04-15 16:52:38] Max score: 0.9936
+[2026-04-15 16:52:38] Bottom-2 mean score (subjects [2, 5]): 0.5522
 
-[2026-04-14 11:06:51] ============================================================
-[2026-04-14 11:06:51] RUNNING CONFIG 18/20: band_12_30__csp_6
-[2026-04-14 11:06:51] ============================================================
-[2026-04-14 11:07:23] Results shape: (18, 15)
-[2026-04-14 11:07:23] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:07:23] Elapsed (sec): 31.36
-[2026-04-14 11:07:23] Mean score: 0.7359
-[2026-04-14 11:07:23] Std score: 0.1564
-[2026-04-14 11:07:23] Min score: 0.4493
-[2026-04-14 11:07:23] Max score: 0.9306
-[2026-04-14 11:07:23] Bottom-3 mean score (subjects [2, 5, 6]): 0.5652
+[2026-04-15 16:52:38] ============================================================
+[2026-04-15 16:52:38] RUNNING CONFIG 19/30: band_10_30__csp_4
+[2026-04-15 16:52:38] ============================================================
+[2026-04-15 16:54:16] Results shape: (18, 15)
+[2026-04-15 16:54:16] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:54:16] Elapsed (sec): 98.06
+[2026-04-15 16:54:16] Mean score: 0.7262
+[2026-04-15 16:54:16] Std score: 0.1524
+[2026-04-15 16:54:16] Min score: 0.5033
+[2026-04-15 16:54:16] Max score: 0.9722
+[2026-04-15 16:54:16] Bottom-2 mean score (subjects [2, 5]): 0.5598
 
-[2026-04-14 11:07:23] ============================================================
-[2026-04-14 11:07:23] RUNNING CONFIG 19/20: band_12_30__csp_8
-[2026-04-14 11:07:23] ============================================================
-[2026-04-14 11:07:54] Results shape: (18, 15)
-[2026-04-14 11:07:54] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:07:54] Elapsed (sec): 31.53
-[2026-04-14 11:07:54] Mean score: 0.7502
-[2026-04-14 11:07:54] Std score: 0.1670
-[2026-04-14 11:07:54] Min score: 0.4425
-[2026-04-14 11:07:54] Max score: 0.9711
-[2026-04-14 11:07:54] Bottom-3 mean score (subjects [2, 5, 6]): 0.5913
+[2026-04-15 16:54:16] ============================================================
+[2026-04-15 16:54:16] RUNNING CONFIG 20/30: band_10_30__csp_6
+[2026-04-15 16:54:16] ============================================================
+[2026-04-15 16:55:54] Results shape: (18, 15)
+[2026-04-15 16:55:54] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:55:54] Elapsed (sec): 97.46
+[2026-04-15 16:55:54] Mean score: 0.7533
+[2026-04-15 16:55:54] Std score: 0.1669
+[2026-04-15 16:55:54] Min score: 0.5044
+[2026-04-15 16:55:54] Max score: 0.9823
+[2026-04-15 16:55:54] Bottom-2 mean score (subjects [2, 5]): 0.5450
 
-[2026-04-14 11:07:54] ============================================================
-[2026-04-14 11:07:54] RUNNING CONFIG 20/20: band_12_30__csp_10
-[2026-04-14 11:07:54] ============================================================
-[2026-04-14 11:08:26] Results shape: (18, 15)
-[2026-04-14 11:08:26] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
-[2026-04-14 11:08:26] Elapsed (sec): 31.48
-[2026-04-14 11:08:26] Mean score: 0.7466
-[2026-04-14 11:08:26] Std score: 0.1625
-[2026-04-14 11:08:26] Min score: 0.4502
-[2026-04-14 11:08:26] Max score: 0.9688
-[2026-04-14 11:08:26] Bottom-3 mean score (subjects [2, 5, 6]): 0.5919
+[2026-04-15 16:55:54] ============================================================
+[2026-04-15 16:55:54] RUNNING CONFIG 21/30: band_10_30__csp_8
+[2026-04-15 16:55:54] ============================================================
+[2026-04-15 16:57:32] Results shape: (18, 15)
+[2026-04-15 16:57:32] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:57:32] Elapsed (sec): 98.29
+[2026-04-15 16:57:32] Mean score: 0.7622
+[2026-04-15 16:57:32] Std score: 0.1662
+[2026-04-15 16:57:32] Min score: 0.5004
+[2026-04-15 16:57:32] Max score: 0.9855
+[2026-04-15 16:57:32] Bottom-2 mean score (subjects [2, 5]): 0.5445
 
-[2026-04-14 11:08:26] ============================================================
-[2026-04-14 11:08:26] SWEEP COMPLETE
-[2026-04-14 11:08:26] ============================================================
-[2026-04-14 11:08:26] Combined raw results shape: (360, 15)
-[2026-04-14 11:08:26] Config summary shape: (20, 11)
-[2026-04-14 11:08:26] Per-subject summary shape: (180, 8)
+[2026-04-15 16:57:32] ============================================================
+[2026-04-15 16:57:32] RUNNING CONFIG 22/30: band_10_30__csp_10
+[2026-04-15 16:57:32] ============================================================
+[2026-04-15 16:59:11] Results shape: (18, 15)
+[2026-04-15 16:59:11] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 16:59:11] Elapsed (sec): 99.01
+[2026-04-15 16:59:11] Mean score: 0.7621
+[2026-04-15 16:59:11] Std score: 0.1650
+[2026-04-15 16:59:11] Min score: 0.4919
+[2026-04-15 16:59:11] Max score: 0.9863
+[2026-04-15 16:59:11] Bottom-2 mean score (subjects [2, 5]): 0.5438
 
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] TOP CONFIGS BY OVERALL MEAN
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25]           config_name band_label  n_components  mean_score  bottom3_mean_score
-0   band_8_35__csp_10       8-35            10    0.775688            0.610725
-1   band_8_32__csp_10       8-32            10    0.773202            0.602045
-2    band_8_35__csp_8       8-35             8    0.773191            0.604295
-3    band_8_32__csp_8       8-32             8    0.771916            0.598380
-4   band_8_30__csp_10       8-30            10    0.771583            0.595968
-5    band_8_30__csp_8       8-30             8    0.770308            0.592496
-6    band_8_35__csp_6       8-35             6    0.766386            0.603845
-7    band_8_32__csp_6       8-32             6    0.765464            0.596933
-8    band_8_30__csp_6       8-30             6    0.764125            0.591596
-9  band_10_30__csp_10      10-30            10    0.762089            0.587063
+[2026-04-15 16:59:11] ============================================================
+[2026-04-15 16:59:11] RUNNING CONFIG 23/30: band_10_30__csp_12
+[2026-04-15 16:59:11] ============================================================
+[2026-04-15 17:00:50] Results shape: (18, 15)
+[2026-04-15 17:00:50] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:00:50] Elapsed (sec): 98.81
+[2026-04-15 17:00:50] Mean score: 0.7609
+[2026-04-15 17:00:50] Std score: 0.1673
+[2026-04-15 17:00:50] Min score: 0.4956
+[2026-04-15 17:00:50] Max score: 0.9826
+[2026-04-15 17:00:50] Bottom-2 mean score (subjects [2, 5]): 0.5471
 
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] BEST OVERALL CONFIGURATION
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] {'band_low': 8, 'band_high': 35, 'band_label': '8-35', 'n_components': 10, 'config_name': 'band_8_35__csp_10', 'mean_score': 0.7756879925727844, 'std_score': 0.1604488641023636, 'min_score': 0.5343364477157593, 'max_score': 0.9936342835426331, 'elapsed_sec': 33.36654710769653, 'bottom3_mean_score': 0.6107252836227417}
+[2026-04-15 17:00:50] ============================================================
+[2026-04-15 17:00:50] RUNNING CONFIG 24/30: band_10_30__csp_14
+[2026-04-15 17:00:50] ============================================================
+[2026-04-15 17:02:28] Results shape: (18, 15)
+[2026-04-15 17:02:28] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:02:28] Elapsed (sec): 98.56
+[2026-04-15 17:02:28] Mean score: 0.7597
+[2026-04-15 17:02:28] Std score: 0.1762
+[2026-04-15 17:02:28] Min score: 0.4763
+[2026-04-15 17:02:28] Max score: 0.9819
+[2026-04-15 17:02:28] Bottom-2 mean score (subjects [2, 5]): 0.5283
 
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] BEST CONFIGURATION FOR LOW SUBJECTS (2, 5, 6)
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] {'band_low': 8, 'band_high': 35, 'band_label': '8-35', 'n_components': 10, 'config_name': 'band_8_35__csp_10', 'mean_score': 0.7756879925727844, 'std_score': 0.1604488641023636, 'min_score': 0.5343364477157593, 'max_score': 0.9936342835426331, 'elapsed_sec': 33.36654710769653, 'bottom3_mean_score': 0.6107252836227417}
+[2026-04-15 17:02:28] ============================================================
+[2026-04-15 17:02:28] RUNNING CONFIG 25/30: band_12_30__csp_4
+[2026-04-15 17:02:28] ============================================================
+[2026-04-15 17:04:05] Results shape: (18, 15)
+[2026-04-15 17:04:05] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:04:05] Elapsed (sec): 97.25
+[2026-04-15 17:04:05] Mean score: 0.6864
+[2026-04-15 17:04:05] Std score: 0.1396
+[2026-04-15 17:04:05] Min score: 0.4587
+[2026-04-15 17:04:05] Max score: 0.9581
+[2026-04-15 17:04:05] Bottom-2 mean score (subjects [2, 5]): 0.5219
 
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25] BEST CONFIGURATION PER LOW SUBJECT
-[2026-04-14 11:09:25] ============================================================
-[2026-04-14 11:09:25]    subject_norm        config_name band_label  n_components     score
-0             2   band_8_32__csp_6       8-32             6  0.565876
-1             5  band_12_30__csp_6      12-30             6  0.594039
-2             6  band_12_30__csp_8      12-30             8  0.739873
+[2026-04-15 17:04:05] ============================================================
+[2026-04-15 17:04:05] RUNNING CONFIG 26/30: band_12_30__csp_6
+[2026-04-15 17:04:05] ============================================================
+[2026-04-15 17:05:44] Results shape: (18, 15)
+[2026-04-15 17:05:44] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:05:44] Elapsed (sec): 98.61
+[2026-04-15 17:05:44] Mean score: 0.7371
+[2026-04-15 17:05:44] Std score: 0.1495
+[2026-04-15 17:05:44] Min score: 0.4543
+[2026-04-15 17:05:44] Max score: 0.9273
+[2026-04-15 17:05:44] Bottom-2 mean score (subjects [2, 5]): 0.5218
 
-[2026-04-14 11:09:25] Baseline summary file not found or unsupported format; baseline comparison skipped.
-[2026-04-14 11:09:30] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/mean_score_by_config.png
-[2026-04-14 11:09:30] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_overall.png
-[2026-04-14 11:09:30] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_bottom3.png
-[2026-04-14 11:09:31] Saved plot: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/low_subjects_config_response.png
-[2026-04-14 11:09:35] ============================================================
-[2026-04-14 11:09:35] FINAL SUMMARY METRICS
-[2026-04-14 11:09:35] ============================================================
-[2026-04-14 11:09:35] best_overall_config_name: band_8_35__csp_10
-[2026-04-14 11:09:35] best_overall_band_label: 8-35
-[2026-04-14 11:09:35] best_overall_n_components: 10
-[2026-04-14 11:09:35] best_overall_mean_score: 0.7756879925727844
-[2026-04-14 11:09:35] best_overall_std_score: 0.1604488641023636
-[2026-04-14 11:09:35] best_overall_min_score: 0.5343364477157593
-[2026-04-14 11:09:35] best_overall_max_score: 0.9936342835426331
-[2026-04-14 11:09:35] best_bottom3_config_name: band_8_35__csp_10
-[2026-04-14 11:09:35] best_bottom3_band_label: 8-35
-[2026-04-14 11:09:35] best_bottom3_n_components: 10
-[2026-04-14 11:09:35] best_bottom3_mean_score: 0.6107252836227417
-[2026-04-14 11:09:35] baseline_mean_reference: None
-[2026-04-14 11:09:35] delta_vs_baseline: None
-[2026-04-14 11:09:35] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/results.csv
-[2026-04-14 11:09:35] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/config_level_summary.csv
-[2026-04-14 11:09:35] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/per_subject_best_config.csv
-[2026-04-14 11:09:35] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/summary_metrics.csv
-[2026-04-14 11:09:35] Saved table: /Users/vadim/Documents/School/Spring 2026/CSCE A662 Advanced Data Mining/Assignments/Assignment 2/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/summary_metrics.json
-[2026-04-14 11:09:35] All required artifacts saved.
+[2026-04-15 17:05:44] ============================================================
+[2026-04-15 17:05:44] RUNNING CONFIG 27/30: band_12_30__csp_8
+[2026-04-15 17:05:44] ============================================================
+[2026-04-15 17:07:22] Results shape: (18, 15)
+[2026-04-15 17:07:22] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:07:22] Elapsed (sec): 98.40
+[2026-04-15 17:07:22] Mean score: 0.7451
+[2026-04-15 17:07:22] Std score: 0.1663
+[2026-04-15 17:07:22] Min score: 0.4441
+[2026-04-15 17:07:22] Max score: 0.9738
+[2026-04-15 17:07:22] Bottom-2 mean score (subjects [2, 5]): 0.5121
+
+[2026-04-15 17:07:22] ============================================================
+[2026-04-15 17:07:22] RUNNING CONFIG 28/30: band_12_30__csp_10
+[2026-04-15 17:07:22] ============================================================
+[2026-04-15 17:09:01] Results shape: (18, 15)
+[2026-04-15 17:09:01] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:09:01] Elapsed (sec): 98.77
+[2026-04-15 17:09:01] Mean score: 0.7482
+[2026-04-15 17:09:01] Std score: 0.1637
+[2026-04-15 17:09:01] Min score: 0.4535
+[2026-04-15 17:09:01] Max score: 0.9720
+[2026-04-15 17:09:01] Bottom-2 mean score (subjects [2, 5]): 0.5176
+
+[2026-04-15 17:09:01] ============================================================
+[2026-04-15 17:09:01] RUNNING CONFIG 29/30: band_12_30__csp_12
+[2026-04-15 17:09:01] ============================================================
+[2026-04-15 17:10:39] Results shape: (18, 15)
+[2026-04-15 17:10:39] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:10:39] Elapsed (sec): 98.01
+[2026-04-15 17:10:39] Mean score: 0.7370
+[2026-04-15 17:10:39] Std score: 0.1559
+[2026-04-15 17:10:39] Min score: 0.4174
+[2026-04-15 17:10:39] Max score: 0.9350
+[2026-04-15 17:10:39] Bottom-2 mean score (subjects [2, 5]): 0.5213
+
+[2026-04-15 17:10:39] ============================================================
+[2026-04-15 17:10:39] RUNNING CONFIG 30/30: band_12_30__csp_14
+[2026-04-15 17:10:39] ============================================================
+[2026-04-15 17:12:18] Results shape: (18, 15)
+[2026-04-15 17:12:18] Results columns: ['score', 'time', 'samples', 'subject', 'session', 'channels', 'n_sessions', 'dataset', 'pipeline', 'band_low', 'band_high', 'band_label', 'n_components', 'config_name', 'subject_norm']
+[2026-04-15 17:12:18] Elapsed (sec): 98.24
+[2026-04-15 17:12:18] Mean score: 0.7380
+[2026-04-15 17:12:18] Std score: 0.1543
+[2026-04-15 17:12:18] Min score: 0.4298
+[2026-04-15 17:12:18] Max score: 0.9302
+[2026-04-15 17:12:18] Bottom-2 mean score (subjects [2, 5]): 0.5225
+
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] SWEEP COMPLETE
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] Combined raw results shape: (540, 15)
+[2026-04-15 17:12:18] Config summary shape: (30, 11)
+[2026-04-15 17:12:18] Per-subject summary shape: (270, 8)
+
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] TOP CONFIGS BY OVERALL MEAN
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18]          config_name band_label  n_components  mean_score  bottom2_mean_score
+0  band_8_35__csp_10       8-35            10    0.777381            0.563802
+1  band_8_35__csp_12       8-35            12    0.776577            0.558690
+2   band_8_35__csp_8       8-35             8    0.776299            0.568576
+3  band_8_32__csp_10       8-32            10    0.776245            0.558931
+4  band_8_30__csp_12       8-30            12    0.775624            0.547840
+5   band_8_32__csp_8       8-32             8    0.775356            0.563175
+6   band_8_30__csp_8       8-30             8    0.774766            0.558642
+7  band_8_30__csp_10       8-30            10    0.774584            0.552324
+8  band_8_35__csp_14       8-35            14    0.774445            0.552228
+9  band_8_32__csp_12       8-32            12    0.773438            0.550588
+
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] BEST OVERALL CONFIGURATION
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] {'band_low': 8, 'band_high': 35, 'band_label': '8-35', 'n_components': 10, 'config_name': 'band_8_35__csp_10', 'mean_score': 0.7773812413215637, 'std_score': 0.16206365823745728, 'min_score': 0.520061731338501, 'max_score': 0.9913194179534912, 'elapsed_sec': 98.00474405288696, 'bottom2_mean_score': 0.5638021230697632}
+
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] BEST CONFIGURATION FOR LOW SUBJECTS (2, 5)
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] {'band_low': 8, 'band_high': 35, 'band_label': '8-35', 'n_components': 8, 'config_name': 'band_8_35__csp_8', 'mean_score': 0.7762988805770874, 'std_score': 0.16164110600948334, 'min_score': 0.5177469253540039, 'max_score': 0.9901620149612427, 'elapsed_sec': 98.34179282188416, 'bottom2_mean_score': 0.5685763955116272}
+
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18] BEST CONFIGURATION PER LOW SUBJECT
+[2026-04-15 17:12:18] ============================================================
+[2026-04-15 17:12:18]    subject_norm         config_name band_label  n_components     score
+0             2    band_8_35__csp_6       8-35             6  0.570120
+1             5  band_12_30__csp_12      12-30            12  0.598283
+
+[2026-04-15 17:12:18] Baseline summary file not found or unsupported format; baseline comparison skipped.
+[2026-04-15 17:12:18] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/mean_score_by_config.png
+[2026-04-15 17:12:18] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_overall.png
+[2026-04-15 17:12:18] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_bottom2.png
+[2026-04-15 17:12:19] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/low_subjects_config_response.png
+[2026-04-15 17:12:19] ============================================================
+[2026-04-15 17:12:19] FINAL SUMMARY METRICS
+[2026-04-15 17:12:19] ============================================================
+[2026-04-15 17:12:19] best_overall_config_name: band_8_35__csp_10
+[2026-04-15 17:12:19] best_overall_band_label: 8-35
+[2026-04-15 17:12:19] best_overall_n_components: 10
+[2026-04-15 17:12:19] best_overall_mean_score: 0.7773812413215637
+[2026-04-15 17:12:19] best_overall_std_score: 0.16206365823745728
+[2026-04-15 17:12:19] best_overall_min_score: 0.520061731338501
+[2026-04-15 17:12:19] best_overall_max_score: 0.9913194179534912
+[2026-04-15 17:12:19] best_bottom2_config_name: band_8_35__csp_8
+[2026-04-15 17:12:19] best_bottom2_band_label: 8-35
+[2026-04-15 17:12:19] best_bottom2_n_components: 8
+[2026-04-15 17:12:19] best_bottom2_mean_score: 0.5685763955116272
+[2026-04-15 17:12:19] baseline_mean_reference: None
+[2026-04-15 17:12:19] delta_vs_baseline: None
+[2026-04-15 17:12:19] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/results.csv
+[2026-04-15 17:12:19] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/config_level_summary.csv
+[2026-04-15 17:12:19] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/per_subject_best_config.csv
+[2026-04-15 17:12:19] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/summary_metrics.csv
+[2026-04-15 17:12:19] Saved table: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/summary_metrics.json
+[2026-04-15 17:12:19] All required artifacts saved.
+[2026-04-15 17:32:23] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_subject2.png
+[2026-04-15 17:34:53] Saved plot: /home/vegorov/Repos/bci-inefficiency-analysis/src/artifacts/03c_csp_band_tuning/score_heatmap_subject5.png
