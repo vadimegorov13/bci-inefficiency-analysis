@@ -54,7 +54,7 @@ The dataset used in this project was BNCI2014_001, and the task was restricted t
 
 Can classical EEG feature extraction and transfer-style methods improve cross-subject performance, especially for low-performing subjects?
 
-The analysis consistently identified Subjects 2, 5, and 6 as the weakest users in the subject-independent experiments, so these subjects became the main focus of the later tuning and transfer analysis.
+The analysis consistently identified Subjects 2 and 5 as the weakest users in the subject-independent experiments, so these subjects became the main focus of the later tuning and transfer analysis.
 
 ---
 
@@ -69,7 +69,7 @@ The project began with a classical CSP + LDA baseline. After establishing the ba
 
 ## Baseline Results
 
-The original subject-independent baseline used 8–32 Hz, 8 CSP components, and LDA. This baseline achieved a mean score of 0.7719 with standard deviation 0.1625. The lowest-performing subjects were 2, 5, and 6.
+The original subject-independent baseline used 8–32 Hz, 8 CSP components, and LDA. This baseline achieved a mean score of 0.7719 with standard deviation 0.1625. The lowest-performing subjects were 2 and 5.
 
 This was an important result because it showed two things at once. First, the baseline was already reasonably strong overall. Second, there was clear user-specific variability, which justified the rest of the project.
 
@@ -93,9 +93,9 @@ Band: 8–35 Hz
 CSP components: 10
 Mean score: 0.7757
 
-This result improved slightly over the original baseline mean of 0.7719. The same tuned configuration was also best on average for the weak-subject group (2, 5, 6), with a bottom-3 mean of 0.6107.
+This result improved slightly over the original baseline mean of 0.7719. The same tuned configuration was also best on average for the weak-subject group (2, 5), with a bottom-2 mean of AAAA.
 
-However, the tuning sweep also revealed an important limitation: the weak subjects did not all prefer the same settings. Subject 2, Subject 5, and Subject 6 each had different best local configurations. That means the problem is not fully solved by one global hyperparameter choice. Instead, subject variability remains the main unresolved issue.
+However, the tuning sweep also revealed an important limitation: the weak subjects did not all prefer the same settings. Subject 2 and Subject 5 each had different best local configurations. That means the problem is not fully solved by one global hyperparameter choice. Instead, subject variability remains the main unresolved issue.
 
 ---
 
